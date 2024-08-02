@@ -15,7 +15,7 @@ exibir sua probabilidade da classe de predição.
 
 """
 
-client = boto3.client('rekognition', region_name='us-east-1')
+client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id=st.secrets["id"], aws_secret_access_key=st.secrets["key"])
 
 project_arn='arn:aws:rekognition:us-east-1:465575464224:project/detect_face_liveness/1722564559345'
 version_name='detect_face_liveness.2024-08-01T23.29.48'
